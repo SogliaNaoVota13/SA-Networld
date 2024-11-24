@@ -1,0 +1,379 @@
+body {
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    cursor: url(/imgs/cursor.png), auto;
+    background: linear;
+    background: radial-gradient(circle, rgba(37,98,60,1) 0%, rgba(23,65,35,1) 30%, rgba(19,19,25,1) 100%);
+    /*background-color: #131319 ;*/
+    font-family: 'saira', sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+body main h1{
+    margin-bottom: 20px; /* Espaço entre o título e a caixa */
+    text-align: center; /* Centraliza o texto */
+}
+body main{
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column; /* Alinha título e caixa em uma coluna */
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+}
+#logo{
+    width: 116px;
+height: 67px;
+flex-shrink: 0;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 232px;
+    padding-top: 25px;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 250;
+}
+.navigation{
+    padding-right: 232px;
+    display: flex;
+    gap: 21px;
+    cursor: pointer;
+    font-size: 18px;    
+}
+.navigation :hover{
+    color: #43EA80;
+}
+.header-button{
+    font-family: 'saira', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: inline-flex;
+padding: 0px 13px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+background: var(--Linear, linear-gradient(180deg, #43EA80 0%, #186C26 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+#contato{
+    border-radius: 20px;
+    border: 2px solid var(--Linear, rgba(102, 102, 102, 0.00));
+    border: solid 2px, #186C26;
+    background: none;
+}
+section {
+    text-align: center;
+    padding: 50px;
+    background: rgba(217, 217, 217, 0.06);
+    margin: 15px;
+    border-radius: 20px;
+    border: 1px solid #07A25F;
+}
+
+section h2 {
+    font-family: 'sora';
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+text-align: center;
+font-family: Sora;
+font-size: 30px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+section p {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: sora;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+}
+
+
+button main {
+    background-color: #ffffff00;
+    color: black;
+    width: 150px;
+    height: 50px;
+    border: #3654ff 0.2em solid;
+    border-radius: 11px;
+    text-align: center;
+    transition: all 0.6s ease;
+    font-size: large;
+}
+  
+button main:hover {
+    background-color: #3654ff;
+    cursor: pointer;
+}
+
+button main svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+}
+  
+button main:hover svg {
+    transform: translateX(5px);
+}
+
+input{
+    text-align: center;
+    border: 3px solid black;
+    width: 200px;
+    height: 40px;
+    font-size: large;
+}
+
+#res {
+    background: rgba(217, 217, 217, 0.06);
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+
+.config_a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 2%;
+    padding: 15px;
+    background-color: aliceblue;
+    margin: 0 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 100px;
+    margin-bottom: 0px;
+}
+
+main section {
+    width: 80%; padding: 20px 100px;
+}
+
+main section img {
+    width: 30%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+
+main section img:hover {
+    border: #2542a7 1px solid;
+}
+
+.div-especial {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.div-especial div, .div-especial section {
+    margin: 0 10px;
+    flex: 1 1 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.div-especial img {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'sora';
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+text-align: center;
+font-family: Sora;
+font-size: 38px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+hr {
+    border: #186C26 1px solid;
+    width: 90%;
+    margin: 10px 0;
+}
+
+.hr-especial {
+    width: 100%;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: start;
+    color: #050a30;
+    margin-top: 20px;
+}
+
+.laranja {
+    color: orange;
+}
+
+.roxo {
+    color: purple;
+}
+
+.verde {
+    color: white;
+}
+
+
+.center {
+    text-align: center;
+}
+
+
+.button {
+    display: flex;
+}
+
+.button button {
+    margin: 0 2px;
+}
+
+.quest {
+    display: none;
+    justify-content: center;
+    text-align: center;
+    background: rgba(217, 217, 217, 0.06);
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #07A25F;
+    transition: 0.5;
+    width: 70%;
+}
+
+
+.quest:hover {
+    box-shadow: 0 3px 10px #050a30;
+    transform: translateY(-3px);
+}
+
+.quest pre {
+    text-align: start;
+    padding: 30px 60px;
+}
+
+.programacao {
+    background: rgba(217, 217, 217, 0.06);
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.programacao:hover {
+    box-shadow: 0 3px 5px rgb(0, 146, 12);
+    transform: translateY(-3px);
+}
+
+.buuton button{
+    margin: 5px;
+    margin-top: 10px;
+    color: white;
+    font-family: saira;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+    color: #4d4d4d;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 12px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid rgb(206, 206, 206);
+}
+.buuton button:hover{
+    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+.button button{
+    margin: 5px;
+    margin-top: 10px;
+    color: white;
+    font-family: saira;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+    color: #4d4d4d;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 12px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid rgb(206, 206, 206);
+}
+
+.button button:hover {
+    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+footer{
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    background-color: #000000;
+  }
+  i{
+    padding-right: 200px;
+  }
+.footer-icon{
+    width: 50px ;
+    height: 50px;
+    padding: 3px;
+}
+.footer-icon:hover{
+    cursor: pointer;
+    opacity: 85%;
+}
+p{
+    padding: 25px;
+}

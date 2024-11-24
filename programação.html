@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/prog.css">
+    <title>SA-Algoritmo-bubble-sort</title>
+    <script src="js/prog.js"defer></script>
+    <link rel="shortcut icon" href="/imgs/logo.ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="header-content">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img id="logo" src="/imgs/logo.ico.png" alt="Logo ">
+                    </a>
+                   
+                </div>
+                <div class="navigation">
+                    <a href="index.html">Home</a>
+                    <a href="eletroeletrônica.html">Eletroeletrônica</a>
+                    <a href="redes.html">Redes</a>
+                    <a href="bancos.html">Bancos</a>
+                    <a href="algoritmos.html">Algoritmos</a>
+                    <a href="programação.html">Programação</a>
+                    <button id="contato">
+                        <a class="header-button" href="contato.html">contato</a>
+                    </button>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <h1>Programação</h1> <hr>
+        <section id="questProva1" class="programacao">
+            <h2>Somatória de 2 matrizes</h2>
+            <hr class="hr-especial">
+            <p>Elabore um programa que gera duas matrizes uma matriz 7 x 7, sendo uma
+                do tipo do tipo diagonal secundária, cujos os elementos da diagonal secundária
+                são iguais a 5 e outra matriz diagonal principal, cujos elementos são iguais a 7.
+                Após gerar as duas matrizes, faça a soma entre elas. Use o laço “for” para
+                elaborar a lógica do programa.</p>
+            <hr class="hr-especial">
+            <div class="button">
+                <button onclick="ex1Prova()">Calcular</button>
+                <button onclick="mostra('preQuestProva1')" >Mostrar Código</button>
+            </div>
+            <code id="preQuestProva1" class="quest">
+                <pre>
+    
+function ex1Prova() {
+    let matriz1 = [
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
+    ]
+
+    let matriz2 = [
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
+    ]
+
+    let somaMatriz = [
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
+    ]
+
+
+    for (let i = 0; i &#60; matriz1.length; i++) {
+        for (let j = 0; j &#60; matriz1.length; j++) {
+            if (i + j == 6) {
+                matriz1[i][j] = 5
+            }
+        }
+    }
+
+    for (let i = 0; i &#60; matriz2.length; i++) {
+        for (let j = 0; j &#60; matriz2.length; j++) {
+            if (i == j) {
+                matriz2[i][j] = 7
+            }
+        }
+    }
+
+    for (let i = 0; i &#60; matriz2.length; i++) {
+        for (let j = 0; j &#60; matriz2.length; j++) {
+            somaMatriz[i][j] = matriz1[i][j] + matriz2[i][j]
+        }
+    }
+
+    console.table(somaMatriz)
+
+    let quest = document.querySelector('#questProva1')
+    let dive = document.createElement('pre')
+    dive.id = 'resProva1'
+    
+    quest.appendChild(dive)
+
+    let res = document.getElementById('resProva1')
+
+    res.innerHTML  =`[${matriz1[0]}] [${matriz2[0]}] [${somaMatriz[0]}]`
+    res.innerHTML +=`[${matriz1[1]}] [${matriz2[1]}] [${somaMatriz[1]}]`
+    res.innerHTML +=`[${matriz1[2]}] [${matriz2[2]}] [${somaMatriz[2]}]`
+    res.innerHTML +=`[${matriz1[3]}]+[${matriz2[3]}]=[${somaMatriz[3]}]`
+    res.innerHTML +=`[${matriz1[4]}] [${matriz2[4]}] [${somaMatriz[4]}]`
+    res.innerHTML +=`[${matriz1[5]}] [${matriz2[5]}] [${somaMatriz[5]}]`
+    res.innerHTML +=`[${matriz1[6]}] [${matriz2[6]}] [${somaMatriz[6]}]`
+}
+    
+                </pre>
+            </code>
+        </section>
+        <hr>
+        <section id="questProva2" class="programacao">
+            <h2>Soma de números Pares e Ímpares</h2>
+            <hr class="hr-especial">
+            <p>Elabore um programa que gera uma matriz 7 x 7 com números aleatórios em
+                um intervalo de 1 à 20. Após gerar a matriz, faça a soma dos números pares e
+                ímpares da matriz separadamente. Use o laço “for” para elaborar a lógica do
+                programa.</p>
+            <hr class="hr-especial">
+            <div class="buuton">
+                <button onclick="ex2Prova()">Calcular</button>
+                <button onclick="mostra('preQuestProva2')">Mostrar Código</button>
+            </div>
+            <code id="preQuestProva2" class="quest">
+                <pre>
+            
+            function ex2Prova() {
+                let matriz = [
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0]
+                ]
+            
+                let somaPar = 0, somaImpar = 0
+            
+                for (let i = 0; i &#60; matriz.length; i++) {
+                    for (let j = 0; j &#60; matriz.length; j++) {
+                        matriz[i][j] = setValueRandom(20, 1)
+                    }
+                }
+            
+                for (let i = 0; i &#60; matriz.length; i++) {
+                    for (let j = 0; j &#60; matriz.length; j++) {
+                        if (matriz[i][j] % 2 == 0) {
+                            somaPar += matriz[i][j]
+                        } else if (matriz[i][j] % 2 == 1) {
+                            somaImpar += matriz[i][j]
+                        }
+                    }
+                }
+            
+                console.table(matriz)
+                console.log(`Soma dos números pares: ${somaPar}`)
+                console.log(`Soma dos números ímpares: ${somaImpar}`)
+            
+                let quest = document.querySelector('#questProva2')
+                let dive = document.createElement('pre')
+                dive.id = 'resProva2'
+                
+                quest.appendChild(dive)
+            
+                let res = document.getElementById('resProva2')
+            
+                res.innerHTML  = `Resultado: `
+                res.innerHTML += `[ ${matriz[0]} ]`
+                res.innerHTML += `[ ${matriz[1]} ] Soma dos Pares: ${somaPar}`
+                res.innerHTML += `[ ${matriz[2]} ]`
+                res.innerHTML += `[ ${matriz[3]} ] Soma dos Ímpares: ${somaImpar}`
+                res.innerHTML += `[ ${matriz[4]} ]`
+                res.innerHTML += `[ ${matriz[5]} ]`
+                res.innerHTML += `[ ${matriz[6]} ]`
+            }
+    
+                </pre>
+            </code>
+        </section>
+        <hr>
+        <section id="questProva3" class="programacao">
+            <h2>Soma das Colunas Ímpares</h2>
+            <hr class="hr-especial">
+            <p>Elabore um programa que gera uma matriz 8 x 8 de números aleatórios em
+                um intervalo de 1 à 50. Faça a soma dos elementos das colunas cujos os índices
+                são ímpares. Use o laço “for” para elaborar a lógica do programa.</p>
+            <hr class="hr-especial">
+            <div class="button">
+                <button onclick="ex3Prova()">Calcular</button>
+                <button onclick="mostra('preQuestProva3')">Mostrar Código</button>
+            </div>
+            <code id="preQuestProva3" class="quest">
+                <pre>
+            
+            function ex3Prova() {
+                let matriz = [
+                    [0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0]
+                ]
+            
+                let somaColImpar = 0
+            
+                for(let i = 0; i &#60; matriz.length; i++) {
+                    for(let j = 0; j &#60; matriz.length; j++) {
+                        matriz[i][j] = setValueRandom(50, 1)
+                    }
+                }
+                
+                for(let i = 0; i &#60; matriz.length; i++) {
+                    for(let j = 0; j &#60; matriz.length; j++) {
+                        if(j % 2 == 1) {
+                            somaColImpar += matriz[i][j]
+                        }
+                    }
+                }
+            
+                console.table(matriz)
+                console.log(`Soma dos números das colunas ímpares: ${somaColImpar}`)
+            
+                let quest = document.querySelector('#questProva3')
+                let dive = document.createElement('pre')
+                dive.id = 'resProva3'
+                
+                quest.appendChild(dive)
+            
+                let res = document.getElementById('resProva3')
+            
+                res.innerHTML  = `Resultado: `
+                res.innerHTML += `[ ${matriz[0]} ]`
+                res.innerHTML += `[ ${matriz[1]} ] Soma das Colunas Impares:`
+                res.innerHTML += `[ ${matriz[2]} ] ${somaColImpar}`
+                res.innerHTML += `[ ${matriz[3]} ]`
+                res.innerHTML += `[ ${matriz[4]} ]`
+                res.innerHTML += `[ ${matriz[5]} ]`
+                res.innerHTML += `[ ${matriz[6]} ]`
+            }
+    
+                </pre>
+            </code>
+        </section>
+        <hr>
+        <section id="ordenacao" class="programacao">
+            <h2>Ordenação de Array</h2>
+            <hr class="hr-especial">
+            <p>programação dos métodos de busca e ordenação buble Sort, insertion sort e selection sort. Com uma array de 10 elementos.</p>
+            <hr class="hr-especial">
+            <div class="button">
+                <button onclick="ordenacao()">Calcular</button>
+                <button onclick="mostra('preOrdenacao')">Mostrar Código</button>
+            </div>
+            <code id="preOrdenacao" class="quest">
+                <pre>
+            
+            function ordenacao() {
+                let quest = document.querySelector('#ordenacao')
+                let dive = document.createElement('pre')
+                dive.id = 'resOrdenacao'
+                
+                quest.appendChild(dive)
+                
+                let res = document.getElementById('resOrdenacao')
+            
+                let array = []
+                for(let i = 0; i < 10; i++) {
+                    array.push(setValueRandom(20, 1))
+                }
+            
+                res.innerHTML = `
+                    Array Bagunçada: ${array}
+                `
+                
+                let bubble = array, selection = array, insert = array
+                
+                let bubbleCont = bubbleSort(bubble)
+                let selectionCont = selectionSort(selection)
+                let insertCont = insertSort(insert)
+            
+                res.innerHTML += `
+                    Array Ordenada: ${bubble}
+                    Voltas do bubbleSort: ${bubbleCont}
+                    Voltas do selectionSort: ${selectionCont}
+                    Voltas do insertSort: ${insertCont}
+                `
+            }
+    
+            function bubbleSort(array) {
+                let cont = 0
+                for (let j = array.length - 1; j > 0; j--) {
+                    for (let i = 0; i &#60; array.length - 1; i++) {
+                        if (array[i] > array[i + 1]) {
+                            let guard = array[i]
+                            array[i] = array[i + 1]
+                            array[i + 1] = guard
+                        }
+                        cont++
+                    }
+                }
+                return cont++
+            }
+            
+            function selectionSort(array) {
+                let cont = 0
+                for (let i = 0; i &#60; array.length; i++) {
+                    let menor = i
+                    for (let j = i + 1; j &#60; array.length; j++) {
+                        if (array[j] &#60; array[menor]) {
+                            menor = j
+                        }
+                        cont++
+                    }
+                    if (i != menor) {
+                        let guard = array[i]
+                        array[i] = array[menor]
+                        array[menor] = guard
+                    }
+                }
+                return cont
+            }
+            
+            function insertSort(array) {
+                let cont = 0
+                for (let i = 0; i &#60; array.length; i++) {
+                    let j = i - 1
+                    let guard = array[i]
+                    while (j >= 0 && guard &#60; array[JSON]) {
+                        array[j + 1] = array[j]
+                        j--
+                    }
+                    cont++
+                    array[j + 1] = guard
+                }
+                return cont
+            }
+    
+                </pre>
+            </code>
+        </section>
+        <hr>
+        <section id="for" class="programacao">
+            <h2>Programa com laço FOR</h2>
+            <hr class="hr-especial">
+            <p>Cria uma array de 10 elementos aleatórios usando o laço for ordena eles e enseguida tira cada elemento na lógica de array PILHA utilizando um laço FOR.</p>
+            <hr class="hr-especial">
+            <div class="button">
+                <button onclick="exLacoFor()">Calcular</button>
+                <button onclick="mostra('preFor')">Mostrar Código</button>
+            </div>
+            <code id="preFor" class="quest">
+                <pre>
+            
+            function exLacoFor() {
+                let quest = document.querySelector('#for')
+                let dive = document.createElement('pre')
+                dive.id = 'resFor'
+                
+                quest.appendChild(dive)
+            
+                let res = document.getElementById('resFor')
+                
+                let array = []
+            
+                for(let i = 0; i &#60; 10; i++) {
+                    array.push(setValueRandom(10, 1))
+                }
+            
+                console.log('Array Bagunçada: '+array)
+            
+                res.innerHTML = `
+                    Array Bagunçada: ${array}`
+                
+                bubbleSort(array)
+            
+                res.innerHTML += `
+                    Array Ordenada: ${array}
+            `
+                    
+                console.log('Array Ordenada: '+array)
+                
+                for(let i = 0; i &#60; 10; i++) {
+                    array.pop()
+                    res.innerHTML += `        Pop: ${array} <br>`
+                    console.log('Pop: '+array)
+                }
+                    
+                res.innerHTML += `  `
+            }
+    
+                </pre>
+            </code>
+        </section>
+        <hr>
+        <section id="while" class="programacao">
+            <h2>Programa com laço WHILE</h2>
+            <hr class="hr-especial">
+            <p>Gera um número aleatório entre 1 à 20. e apartir de um laço WHILE enquanto ele for menor que 0 ele subtrai um número dele mesmo.</p>
+            <hr class="hr-especial">
+            <div class="button">
+                <button onclick="exLacoWhile()">Calcular</button>
+                <button onclick="mostra('preWhile')">Mostrar Código</button>
+            </div>
+            <code id="preWhile" class="quest">
+                <pre>
+            
+                    function exLacoWhile() {
+                        let quest = document.querySelector('#while')
+                        let dive = document.createElement('pre')
+                        dive.id = 'resWhile'
+                        
+                        quest.appendChild(dive)
+                    
+                        let res = document.getElementById('resWhile')
+                        
+                        let number = setValueRandom(20, 1)
+                    
+                        res.innerHTML = `
+                           Número escolhido: ${number} `
+                        
+                        while(number > 0) {
+                            console.log(number)
+                            number = number - 1
+                            res.innerHTML += '       '+ number
+                        }
+                    
+                        res.innerHTML += '       '
+                    }
+    
+                </pre>
+            </code>
+        </section>
+        <hr>
+        <section id="if" class="programacao">
+            <h2>Programa com estrutura IF-ELSE</h2>
+            <hr class="hr-especial">
+            <p>Gera um número aleatório entre 100 e -10 aonde será representado como idade, e apartir de uma estrutura IF-ELSE ele falará se essa idade é apta a votar, ou se opcional ou inválida</p>
+            <hr class="hr-especial">
+            <div class="button">
+                <button onclick="exIfElse()">Calcular</button>
+                <button onclick="mostra('preIf')">Mostrar Código</button>
+            </div>
+            <code id="preIf" class="quest">
+                <pre>
+            
+            function exIfElse() {
+                let quest = document.querySelector('#if')
+                let dive = document.createElement('pre')
+                dive.id = 'resIf'
+                
+                quest.appendChild(dive)
+            
+                let res = document.getElementById('resIf')
+                
+                
+                let idade = setValueRandom(70, -10)
+            
+                res.innerHTML = `
+                    Idade: ${idade}`
+            
+                console.log("Sua idade:" + idade)
+            
+                if(idade &#60;= 0) {
+                    console.log('Inválido')
+                    res.innerHTML += `        Voto Inválido`
+                } else if((idade > 0)&&(idade &#60; 16)) {
+                    console.log('Você não pode votar')
+                    res.innerHTML += `        Não pode votar`
+                } else if(((idade >= 16)&&(idade &#60; 17))||idade >= 70) {
+                    console.log('Voto Opcional')
+                    res.innerHTML += `        Voto Opcional`
+                } else if((idade >= 18)&&(idade &#60; 70)) {
+                    console.log('Voto obrigatório')
+                    res.innerHTML += `        Voto Obrigatório`
+                } else {
+                    console.log('Voto Inválido')
+                    res.innerHTML += `        Voto Inválido`
+                }
+            
+                res.innerHTML += `   
+                `
+            } 
+                    
+    
+                </pre>
+            </code>
+        </section>
+    </main>
+  
+    <footer>
+        <p>2024© Arthur Soglia</p>
+        <div>
+            <i>
+                <a href="https://www.youtube.com/@ArthurSoglia">
+                    <img class="footer-icon" src="/imgs/youtube-logo-60.png" alt="youtube" >
+                </a>
+               <a href="https://www.instagram.com/o_arthur1x/">
+                <img class="footer-icon" src="/imgs/instagram-alt-logo-60.png" alt="instagram">
+               </a>
+                <a href="https://github.com/SogliaNaoVota13">
+                    <img class="footer-icon" src="/imgs/github-logo-60.png" alt="github">
+                </a>
+                <a href="https://wa.me/+5547997279210?text=Veio%20da%20Networld%3F%20Mande%20sua%20d%C3%BAvida!">
+                    <img class="footer-icon" src="/imgs/whatsapp-square-logo-60.png" alt="whatsapp">
+                </a>
+                
+            </i>
+        </div>
+    </footer>
+</body>
+</html>

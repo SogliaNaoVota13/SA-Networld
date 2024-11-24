@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+/* body-style*/
+body{
+    cursor: url(/imgs/cursor.png), auto;
+    background-color: #131319 ;
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+    font-family: 'saira', sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+/* header-style*/
+header{
+   width: 100%;
+}
+#logo{
+    width: 116px;
+height: 67px;
+flex-shrink: 0;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 232px;
+    padding-top: 25px;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 250;
+}
+.navigation{
+    padding-right: 232px;
+    display: flex;
+    gap: 21px;
+    cursor: pointer;
+    font-size: 18px;    
+}
+.navigation :hover{
+    color: #43EA80;
+}
+.header-button{
+    font-family: 'saira', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: inline-flex;
+padding: 0px 13px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+background: var(--Linear, linear-gradient(180deg, #43EA80 0%, #186C26 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+#contato{
+    border-radius: 20px;
+    border: 2px solid var(--Linear, rgba(102, 102, 102, 0.00));
+    border: solid 2px, #186C26;
+    background: none;
+}
+
+/* main-style*/
+.hero-container{
+    height: 80vh;
+}
+
+.soglia{
+    position: relative;
+}
+.soglia{
+    flex: 1 1 0;
+    background-image: url(/imgs/SOGLIA\ .webp);
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-position: 50% ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.95;
+}
+.hero-text{
+    position: relative;
+    max-width: 877px;
+    padding-left: 240px;
+    padding-top: 170px
+}
+h1{
+    color: #FFF;
+font-family: Saira;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 44px; /* 91.667% */
+}
+h2{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #FFF;
+font-family: Saira;
+font-size: 28px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.fale-conosco{
+    color: #131319;
+    font-family: 'saira', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+.Btn {
+    width: 404px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    /*background: linear-gradient(to right,#0c9244,#77ffa4,#0d992b,#0ea340,#77ffb0,#0a7734);*/
+    background-size: 250%;
+    background-position: left;
+    color: #e4e4e4bb;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  
+  .Btn:hover {
+    background-color: #e4e4e4fd;
+    animation: 10s;
+  }
+  /*footer style*/
+
+  footer{
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    background-color: #000000;
+    gap: 20px;
+  }
+  i{
+    padding-right: 200px;
+  }
+.footer-icon{
+    width: 50px ;
+    height: 50px;
+    padding: 3px;
+}
+.footer-icon:hover{
+    cursor: pointer;
+    opacity: 85%;
+}
+p{
+    padding-left: 200px;
+}
+
+
+@media screen and (max-width: 450px) {
+    body {
+        padding: 100px;
+    }
+    .soglia{
+        background-repeat: no-repeat;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        background: radial-gradient(circle, rgba(37,98,60,1) 0%, rgba(23,65,35,1) 30%, rgba(19,19,25,1) 100%);
+        /*background-color: #131319 ;*/
+        font-family: 'saira', sans-serif;
+        color: #FFF;
+        text-decoration: none;
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column; /* Alinha título e caixa em uma coluna */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-logo {
+        padding-left: 0;
+        padding-top: 10px;
+        justify-content: flex-start; /* Ajusta o logo para a esquerda */
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        padding-right: 0;
+        justify-content: center; /* Centraliza os links de navegação */
+        gap: 10px;
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    
+    }
+
+    .hero-text {
+        padding-left: 20px;
+        padding-top: 100px;
+        text-align: center; /* Centraliza o texto */
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 40px; /* Ajusta o espaçamento do título */
+    }
+
+    h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .Btn {
+        width: 90%; /* Botão ocupa quase toda a largura */
+        margin: 0 auto; /* Centraliza o botão */
+    }
+
+    footer{
+     align-items: center;
+     display: inline;
+       
+    }
+    .footer-icon:hover{
+        cursor: pointer;
+        opacity: 85%;
+    }
+    footer p{
+     opacity: 0;
+
+    }
+}
+
+
+
+
+  
+

@@ -1,0 +1,227 @@
+/*style-geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+.container{
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    cursor: url(/imgs/cursor.png), auto;
+    background: linear;
+   background-color: #131319;
+    /*background-color: #131319 ;*/
+    font-family: 'saira', sans-serif;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.container main h1 {
+    margin-bottom: 20px; /* Espaço entre o título e a caixa */
+    text-align: center; /* Centraliza o texto */
+}
+
+.container main {
+    flex: 1 1 0;
+    display: flex;
+text-align: center;
+justify-content: center;
+    align-items: center;
+}
+.left-container{
+    
+    align-content: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.right-container{
+    margin-top: 140px;
+    align-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+#nome{
+    color: white;
+    background: rgba(255, 255, 255, 0.00);
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+width: 502px;
+height: 40px;
+border-radius: 20px;
+border: 1px solid #FFF;
+}
+#email{
+    color: white;
+    background: rgba(255, 255, 255, 0.00);
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+width: 502px;
+height: 40px;
+border-radius: 20px;
+border: 1px solid #FFF;
+}
+#telefone{
+    color: white;
+    background: rgba(255, 255, 255, 0.00);
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+width: 502px;
+height: 40px;
+border-radius: 20px;
+border: 1px solid #FFF;
+}
+#ajuda{
+    text-align: left; /* Alinha o texto à esquerda */
+    vertical-align: top; /* Move para cima (não afeta todos os navegadores) */
+    color: white;
+    background: rgba(255, 255, 255, 0.00);
+    padding-left: 10px;
+    display: flex;
+width: 502px;
+height: 120px;
+border-radius: 20px;
+border: 1px solid #FFF;
+}
+#enviar{
+    margin-top: 15px;
+    display: flex;
+width: 502px;
+height: 40px;
+cursor: pointer;
+justify-content: center;
+align-items: center;
+gap: 1px;
+border-radius: 20px;
+border: 2px solid #07A25F;
+background: #22DA8E;
+}
+#enviar{
+    color: #404047;
+text-align: center;
+font-family: Saira;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 45px; /* 250% */
+}
+#enviar:hover{
+    opacity: 90%;
+}
+iframe{
+
+    border-radius: 5px;
+}
+
+
+/*header style*/
+header{
+    width: 100%;
+ }
+ #logo{
+    width: 116px;
+height: 67px;
+flex-shrink: 0;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 232px;
+    padding-top: 25px;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 250;
+}
+.navigation{
+    padding-right: 232px;
+    display: flex;
+    gap: 21px;
+    cursor: pointer;
+    font-size: 18px;    
+}
+.navigation :hover{
+    color: #43EA80;
+}
+.header-button{
+    font-family: 'saira', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: inline-flex;
+padding: 0px 13px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+background: var(--Linear, linear-gradient(180deg, #43EA80 0%, #186C26 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+#contato{
+    border-radius: 20px;
+    border: 2px solid var(--Linear, rgba(102, 102, 102, 0.00));
+    border: solid 2px, #186C26;
+    background: none;
+}
+
+/* eletro-style*/
+
+
+h1{
+
+
+    width: 769px;
+    height: 128px;
+    flex-shrink: 0;
+    color: #FFF;
+font-family: Saira;
+font-size: 41px;
+font-style: normal;
+font-weight: 700;
+line-height: 45px; /* 102.273% */
+text-transform: uppercase;
+}
+/* footer style*/
+
+footer{
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    background-color: #000000;
+  }
+  i{
+    padding-right: 200px;
+  }
+.footer-icon{
+    width: 50px ;
+    height: 50px;
+    padding: 3px;
+}
+.footer-icon:hover{
+    cursor: pointer;
+    opacity: 85%;
+}
+footer p{
+    padding-left: 200px;
+}
